@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/home/tony/work/cmem/ump/ump/docs'
+let g:netrw_dirhist_2='/home/tony/work/egl-dev-trunk/egl/api_tests'
+let g:netrw_dirhist_3='/home/tony/Downloads/pastebin/lodgeit-main/lodgeit'
+let g:netrw_dirhist_4='/home/tony/Downloads/pastebin/lodgeit-main'
+let g:netrw_dirhist_5='gdm'
+let g:netrw_dirhist_6='/home/tony/work/clean/product/benchmarks/3dmmES20_v20_rev2/configuration/mali/linux_vithar_model'
