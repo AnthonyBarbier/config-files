@@ -1,0 +1,11 @@
+#!/bin/bash
+
+exec ck-launch-session gnome-session &
+
+exec `dirname $0`/apps.sh &
+
+#pkill -9 indicator-appli
+
+#exec `dirname $0`/delayed_awesome
+exec awesome
+
