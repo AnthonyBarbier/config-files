@@ -1,5 +1,0 @@
-#!/bin/bash
-
-~/.config/awesome/apps.sh
-
-sleep 1 && exec awesome
