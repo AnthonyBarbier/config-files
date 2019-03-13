@@ -1,0 +1,60 @@
+vbell off
+#bell_msg "Bell in window %n\007"
+
+# Unicode support
+# If you are already in a window you can use ":utf8 on on"
+defutf8 on
+
+# Startup message is annoying
+startup_message off
+
+# Make sure that ~/.bash_profile is sourced as it would be for a new SSH login
+# (if this weren't here each new screen would be like running a script)
+#shell -bash
+#shelltitle "$ |bash"
+
+# Misc h4x to make scrollback work
+terminfo * te@:ti@
+termcapinfo xterm|xterms|xs|rxvt ti=\E7\E[?47l
+defscrollback 8192	# No of lines to keep in memory
+
+# Status line of ultimate win!
+hardstatus off # Screen should send it's messages else where
+hardstatus alwayslastline
+# See the "STRING ESCAPES" section of the screen manpage
+# I can't remember which Debian person got me started.
+# A note on colours: %{abc} where a is things like d for dim, b for bold, ..
+#       b is the background colour
+#       c is the foreground colour
+#   A . in any of those places indicates that setting should not be changed
+# 1 - Blue background and white foreground
+# 2 - List all windows before the current window
+# 3 - Show the current window with a red background
+# 4 - List the remaining windows with a blue background
+# 5 - Pad to the width of the screen.  This makes the rest right justified.
+# 6 - Switch to green text to show the hostname
+# 7 - Switch to yellow text to show the date in ISO8601 and the time in 24 hour
+#                   1     2     3     4        5    6        7
+#hardstatus string "%{.bW}%-w%{.rW}%n %t%{-}%+w %=%{..G} %H %{..Y} %Y-%m-%d %c"
+hardstatus string "%{.bW}%-w%{.gW}%n %t%{-}%+w %=%{..G} %H %{..Y}"
+
+# Enable 256-color mode when screen is started with TERM=xterm-256color
+# Taken from: http://frexx.de/xterm-256-notes/
+#
+# Note that TERM != "xterm-256color" within a screen window. Rather it is
+# "screen" or "screen-bce"
+# 
+# terminfo and termcap for nice 256 color terminal
+# allow bold colors - necessary for some reason
+attrcolor b ".I"
+# tell screen how to set colors. AB = background, AF=foreground
+termcapinfo xterm-256color 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+# erase background with current bg color
+#defbce "on" 
+#bind b eval "writebuf" "exec sh -c 'pbcopy | xclip'"
+#bind b eval "writebuf" 'exec !!! xclip -selection "clipboard" -i /tmp/screen-exchange'
+term "screen-256color"
+
+# Fix keybinding for home / end so that it works in vim :terminal
+bindkey -k kh stuff ^[[H
+bindkey -k kH stuff ^[[F
