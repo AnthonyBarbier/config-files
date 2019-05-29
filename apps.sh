@@ -21,12 +21,15 @@ google-chrome &
 #volti &
 pasystray &
 blueman-applet &
+spotify&
+slack &
 #remmina &
 mount_eis.sh 
 mount_projects.sh 
 mount_arm.sh 
 mount_oldarm.sh 
 monitor-notifications.sh &
+/services/start_upload_server.sh &
 
 sleep 2
 
