@@ -9,7 +9,7 @@ Section "InputClass"
         MatchIsTouchpad "on"
         Driver "libinput"
         Option "Tapping" "on"
-	Option "TappingButtonMap" "lrm"
+        Option "TappingButtonMap" "lrm"
         Option "NaturalScrolling" "on"
         Option "ScrollMethod" "twofinger"
 EndSection
