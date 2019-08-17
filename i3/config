@@ -186,6 +186,7 @@ bindsym $mod+z exec i3lock -f -e -c 202020
 exec i3-sensible-terminal
 exec nm-applet
 exec pasystray
+exec xfce4-power-manager
 
 # move current workspace between monitors
 bindsym $mod+Control+j move workspace to output left
