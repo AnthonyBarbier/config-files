@@ -20,6 +20,14 @@ exec set_workspace_name.sh 6
 exec set_workspace_name.sh 7
 exec set_workspace_name.sh 8
 exec set_workspace_name.sh 9
+exec set_workspace_name.sh 10 "0: Scratch"
+exec set_workspace_name.sh 11 "a"
+exec set_workspace_name.sh 12 "b"
+exec set_workspace_name.sh 13 "c"
+exec set_workspace_name.sh 14 "d"
+exec set_workspace_name.sh 15 "e"
+exec set_workspace_name.sh 16 "f"
+exec set_workspace_name.sh 17 "g"
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -46,7 +54,7 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run
+bindsym $mod+x exec dmenu_run
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -83,12 +91,12 @@ bindsym $mod+Shift+v split h
 bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
+bindsym $mod+m fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
+#bindsym $mod+s layout stacking
+bindsym $mod+t layout tabbed
+bindsym $mod+Shift+t layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -97,7 +105,7 @@ bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
 
 # focus the parent container
-bindsym $mod+a focus parent
+#bindsym $mod+a focus parent
 
 # focus the child container
 #bindsym $mod+d focus child
@@ -112,6 +120,14 @@ bindsym $mod+6 exec "call_wp_i3msg.sh 6 'workspace $WP'"
 bindsym $mod+7 exec "call_wp_i3msg.sh 7 'workspace $WP'"
 bindsym $mod+8 exec "call_wp_i3msg.sh 8 'workspace $WP'"
 bindsym $mod+9 exec "call_wp_i3msg.sh 9 'workspace $WP'"
+bindsym $mod+0 exec "call_wp_i3msg.sh 10 'workspace $WP'"
+bindsym $mod+a exec "call_wp_i3msg.sh 11 'workspace $WP'"
+bindsym $mod+b exec "call_wp_i3msg.sh 12 'workspace $WP'"
+bindsym $mod+c exec "call_wp_i3msg.sh 13 'workspace $WP'"
+bindsym $mod+d exec "call_wp_i3msg.sh 14 'workspace $WP'"
+bindsym $mod+e exec "call_wp_i3msg.sh 15 'workspace $WP'"
+bindsym $mod+f exec "call_wp_i3msg.sh 16 'workspace $WP'"
+bindsym $mod+g exec "call_wp_i3msg.sh 17 'workspace $WP'"
 
 # move focused container to workspace
 bindsym $mod+Shift+1 exec "call_wp_i3msg.sh 1 'move container to workspace $WP'"
@@ -123,13 +139,21 @@ bindsym $mod+Shift+6 exec "call_wp_i3msg.sh 6 'move container to workspace $WP'"
 bindsym $mod+Shift+7 exec "call_wp_i3msg.sh 7 'move container to workspace $WP'"
 bindsym $mod+Shift+8 exec "call_wp_i3msg.sh 8 'move container to workspace $WP'"
 bindsym $mod+Shift+9 exec "call_wp_i3msg.sh 9 'move container to workspace $WP'"
+bindsym $mod+Shift+0 exec "call_wp_i3msg.sh 10 'move container to workspace $WP'"
+bindsym $mod+Shift+a exec "call_wp_i3msg.sh 11 'move container to workspace $WP'"
+bindsym $mod+Shift+b exec "call_wp_i3msg.sh 12 'move container to workspace $WP'"
+bindsym $mod+Shift+c exec "call_wp_i3msg.sh 13 'move container to workspace $WP'"
+bindsym $mod+Shift+d exec "call_wp_i3msg.sh 14 'move container to workspace $WP'"
+bindsym $mod+Shift+e exec "call_wp_i3msg.sh 15 'move container to workspace $WP'"
+bindsym $mod+Shift+f exec "call_wp_i3msg.sh 16 'move container to workspace $WP'"
+bindsym $mod+Shift+g exec "call_wp_i3msg.sh 17 'move container to workspace $WP'"
 
 # reload the configuration file
-bindsym $mod+Shift+c reload
+#bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Control+q exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
