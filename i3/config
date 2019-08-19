@@ -193,6 +193,15 @@ exec xfce4-power-manager
 bindsym $mod+Control+h move workspace to output left
 bindsym $mod+Control+l move workspace to output right
 
+# Pulse Audio controls
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5% #increase sound volume
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -5% #decrease sound volume
+bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle # mute sound
+
+# Sreen brightness controls
+bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
+bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
+
 #TODO: Mark / Unmark:
 ## read 1 character and mark the current window with this character
 #bindsym $mod+m exec i3-input -F 'mark %s' -l 1 -P 'Mark: '
