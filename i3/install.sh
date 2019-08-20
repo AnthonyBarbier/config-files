@@ -3,6 +3,7 @@ sudo apt install -y i3 i3lock i3blocks i3status suckless-tools
 sudo apt install pavucontrol pasystray paprefs nm-applet xfce4-power-manager
 xfce4-power-manager-settings # Enable systray icon!
 #Thunderbird exchangecalendar extension: https://github.com/exchangecalendar/exchangecalendar/releases
+# Thunderbird: ExQuilla (Works for exchange): https://addons.thunderbird.net/en-US/thunderbird/addon/exquilla-exchange-web-services/
 
 # Start nm-applet / pasystray
 # Fix touchpad: https://cravencode.com/post/essentials/enable-tap-to-click-in-i3wm/
@@ -17,9 +18,19 @@ Section "InputClass"
         Option "ScrollMethod" "twofinger"
 EndSection
 EOF
-cp config ~/.config/i3/config 
+mkdir -p ~/.config/i3
+mkdir -p ~/.config/i3status/
+ln -s `pwd`/config ~/.config/i3/config
+ln -s `pwd`/i3status.config ~/.config/i3status/config
+for f in `pwd`/bin/*.sh; do ln -s $f ~/bin/; done
 
 # https://github.com/ruudud/i3wm-scripts --> lock on lid close
+Additional DNS servers: 10.0.9.1
+Addtional search domains: graphcore.ai, ipu.graphcore.ai, bris.graphcore.ai
+Routes... -> 10.0.0.0 255.0.0.0 10.0.9.1 25 
+Tick Use this connection only for resources on its network
+OK
+Save
 
 
 #Not needed: same version as already in Ubuntu
