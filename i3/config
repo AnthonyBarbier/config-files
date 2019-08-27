@@ -48,7 +48,7 @@ font pango:monospace 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec lilyterm
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -205,7 +205,7 @@ exec call_wp_i3msg.sh 2 'workspace $WP; exec slack;'
 exec call_wp_i3msg.sh 3 'workspace $WP; exec thunderbird;'
 exec call_wp_i3msg.sh 4 'workspace $WP; exec google-chrome;'
 bindsym $mod+z exec i3lock -f -e -c 202020
-exec i3-sensible-terminal
+exec lilyterm
 exec nm-applet
 exec pasystray
 exec xfce4-power-manager
