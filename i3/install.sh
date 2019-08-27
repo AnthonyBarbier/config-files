@@ -1,6 +1,6 @@
 sudo apt update
-sudo apt install -y i3 i3lock i3blocks i3status suckless-tools
-sudo apt install pavucontrol pasystray paprefs nm-applet xfce4-power-manager
+sudo apt install -y i3 i3lock i3blocks i3status suckless-tools playerctl
+sudo apt install pavucontrol pasystray paprefs nm-applet xfce4-power-manager blueman
 xfce4-power-manager-settings # Enable systray icon!
 #Thunderbird exchangecalendar extension: https://github.com/exchangecalendar/exchangecalendar/releases
 # Thunderbird: ExQuilla (Works for exchange): https://addons.thunderbird.net/en-US/thunderbird/addon/exquilla-exchange-web-services/
