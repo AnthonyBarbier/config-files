@@ -1,0 +1,2 @@
+#!/bin/bash
+sh -c "i3lock -f -e -c 202020" & systemctl suspend
