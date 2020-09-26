@@ -39,3 +39,22 @@ Save
 # echo "deb http://debian.sur5r.net/i3/ $(grep '^DISTRIB_CODENAME=' /etc/lsb-release | cut -f2 -d=) universe" >> /etc/apt/sources.list.d/sur5r-i3.list
 # apt update
 # apt install i3
+
+sudo apt install regolith-compositor-xcompmgr
+sudo apt remove regolith-compositor-compton-glx
+i A i3xrocks - i3blocks with Xresources and conf.d configuration
+i  i3xrocks-battery - Indicator to show battery status.
+i  i3xrocks-cpu-usage - Indicator to show CPU load.
+i  i3xrocks-focused-window-name - Indicator to show focused window name.
+i  i3xrocks-media-player - Indicator to manage media playback.
+i  i3xrocks-memory - Indicator to show memory utilization.
+i  i3xrocks-net-traffic - Indicator to show network I/O status.
+i  i3xrocks-nm-vpn - Network manager VPN indicator.
+i  i3xrocks-temp - Indicator for system temperature.
+i  i3xrocks-time - Indicator to show date and time.
+i  i3xrocks-volume - Indicator to show volume.
+i  i3xrocks-wifi - Indicator to display wifi router name.
+
+sudo apt purge regolith-notification
+sudo apt install dunst
+
