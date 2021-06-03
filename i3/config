@@ -13,7 +13,7 @@ set $mod Mod4
 
 exec set_workspace_name.sh 1 "1: Term"
 exec set_workspace_name.sh 2 "2: Slack"
-exec set_workspace_name.sh 3 "3: Thunderbird"
+exec set_workspace_name.sh 3 "3: Emails"
 exec set_workspace_name.sh 4 "4: Chrome"
 exec set_workspace_name.sh 5
 exec set_workspace_name.sh 6
@@ -201,18 +201,19 @@ workspace_auto_back_and_forth yes
 force_display_urgency_hint 500 ms
 focus_on_window_activation urgent
 exec xrandr --output DP-1.1 --primary --auto --right-of eDP-1-1 --output DP-1.3 --auto --right-of DP-1.1
-exec /home/anthonyb/bin/birdtray
+#exec /home/anthonyb/bin/birdtray
 
 exec call_wp_i3msg.sh 2 'workspace $WP; exec slack;'
-exec call_wp_i3msg.sh 3 'workspace $WP; exec thunderbird;'
 exec call_wp_i3msg.sh 4 'workspace $WP; exec google-chrome;'
 exec spotify
 exec subl
+exec signal-desktop
 bindsym $mod+z exec i3lock -f -e -c 202020
 exec nm-applet
 exec pasystray
 exec xfce4-power-manager
 exec blueman-applet
+exec tilix
 
 # move current workspace between monitors
 bindsym $mod+Control+h move workspace to output left
