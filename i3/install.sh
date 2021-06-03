@@ -18,10 +18,12 @@ Section "InputClass"
         Option "ScrollMethod" "twofinger"
 EndSection
 EOF
-mkdir -p ~/.config/i3
 mkdir -p ~/.config/i3status/
-ln -s `pwd`/config ~/.config/i3/config
 ln -s `pwd`/i3status.config ~/.config/i3status/config
+# TODO: Use regolith instead of pure i3
+#mkdir -p ~/.config/i3
+#ln -s `pwd`/config ~/.config/i3/config
+ln -s `pwd`/../regolith/ ~/.config/regolith
 for f in `pwd`/bin/*.sh; do ln -s $f ~/bin/; done
 
 # https://github.com/ruudud/i3wm-scripts --> lock on lid close

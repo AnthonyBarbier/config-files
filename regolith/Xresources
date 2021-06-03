@@ -1,6 +1,8 @@
 i3-wm.workspace.01.name: 1: Term
 i3-wm.workspace.02.name: 2: Slack
-i3-wm.workspace.03.name: 3: Thunderbird
+i3-wm.workspace.03.name: 3: Emails
 i3-wm.workspace.04.name: 4: Chrome
+i3-wm.workspace.05.name: 5: Term
+i3-wm.workspace.06.name: 6: Zoom
 i3-wm.workspace.10.name: 0: Scratch
 i3-wm.gaps.inner.size: 0
