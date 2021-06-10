@@ -34,6 +34,14 @@ Tick Use this connection only for resources on its network
 OK
 Save
 
+# Sort out cursor theme
+sudo apt install dmz-cursor-theme
+sudo update-alternatives --config x-cursor-theme
+
+# Sort out dpi:
+echo Xft.dpi: 64 > ~/.Xresources
+xrdb -merge ~/.Xresources
+$mod+Shift+r
 
 #Not needed: same version as already in Ubuntu
 #/usr/lib/apt/apt-helper download-file http://debian.sur5r.net/i3/pool/main/s/sur5r-keyring/sur5r-keyring_2019.02.01_all.deb keyring.deb SHA256:176af52de1a976f103f9809920d80d02411ac5e763f695327de9fa6aff23f416
